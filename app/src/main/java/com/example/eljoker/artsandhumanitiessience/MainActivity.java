@@ -4,18 +4,17 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.Spinner;import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import android.view.View;
+import android.widget.AdapterView;
+
 public class MainActivity extends AppCompatActivity {
-    String dep ;
-    int ye;
-    int sem;
-    String ur ;
+    String dep ;   // stands for which department is selected
+                  // E stands for english department , F for french department and so on
+    int ye;      // stands for which year is selected
+    int sem;    //stands for which semester is selected
+    String ur ;//virable to store links of materials
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                     material.setVisibility(View.GONE);
                     semester.setVisibility(View.GONE);
 
-                    ur="https://drive.google.com/drive/folders/1dvFWHkRZ8jNmAzwfWpc1aAl-tJ0C7-fs";
+                    ur="https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/18wcf5cwC6ZaPIQesj-7tq8gh18KbtCyi&service=writely";
                     Intent intent = new Intent(MainActivity.this, materials.class);
                     intent.putExtra("url", ur);
                     startActivity(intent);
@@ -154,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                    material.setVisibility(View.GONE);
                     semester.setVisibility(View.GONE);
 
-                    ur="https://drive.google.com/drive/folders/1DGNEhr3KAhuSzPtAAqZSNTK2v9evqTeY";
+                    ur="https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFSmJfcTRidzdWa28&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                     Intent intent = new Intent(MainActivity.this, materials.class);
                     intent.putExtra("url", ur);
                     startActivity(intent);
@@ -286,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
                 else if(dep =="G"&ye==1 & semester.getSelectedItem().toString().equals("امتحانات ترم اول")) {
                     sem=1;
                     material.setVisibility(View.GONE);
-                  ur="https://drive.google.com/drive/folders/14VKt2K9_b_0ZKmZaRxzi7wB3et7-Iwtj";
+                  ur="https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1DGNEhr3KAhuSzPtAAqZSNTK2v9evqTeY&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                     Intent intent = new Intent(MainActivity.this, materials.class);
                     intent.putExtra("url", ur);
                     startActivity(intent);
@@ -349,229 +348,229 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
                 if (dep == "E" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("ادب انجليزى")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFTDBDY1ByZU9Ndzg";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFS2w3bDJHb1NDMnM&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 } else if (dep == "E" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("امتحانات")) {
 
-                    ur = "https://drive.google.com/drive/folders/1hn3W0fyGe9k_06jNNQ-Mm1ZIQfS293Kh";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFTDBDY1ByZU9Ndzg&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 } else if (dep == "E" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("جغرافيا غرب اوربا")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFZlZSakdERS1sVXc";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/1hn3W0fyGe9k_06jNNQ-Mm1ZIQfS293Kh&service=writely";
 
                 } else if (dep == "E" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("phonotics-صوتيات1")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFdzgtQ0RIT01YUU0";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFZlZSakdERS1sVXc&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 } else if (dep == "E" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("لغه فرنسيه")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFVk55d0hGUTJFckk";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFdzgtQ0RIT01YUU0&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
 
                 }
                 else if (dep == "E" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("تاريخ غرب اوربا")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFUkFZQktWc0lMZEE";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFVk55d0hGUTJFckk&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
                 else if (dep == "E" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("عماره-civilization")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFVzJCbmRPUG9vLXM";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFUkFZQktWc0lMZEE&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
                 else if (dep == "E" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("لغه عربيه")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFaTRlVmtkakFkRXc";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFVzJCbmRPUG9vLXM&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
                 else if (dep == "E" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("من الادب الانجليزى")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFdURmdmpiUjlsQUk";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFaTRlVmtkakFkRXc&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
 
                 else if (dep == "E" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("drama(shakespearean drama)")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFOFRTVnl6TlZxUDA";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0ByJz1l2rodbFdURmdmpiUjlsQUk&service=writely";
 
                 }
                 else if (dep == "E" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("poetry")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFR0N6ajUzUjBSM1U";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFOFRTVnl6TlZxUDA&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
                 else if (dep == "E" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("امتحانات")) {
-                    ur = "https://drive.google.com/drive/folders/1nYLrDf7K6Oq0PenvY9E1HbwSa_c8wx6I";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders";
 
                 }
                 else if (dep == "E" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("phonotics-صوتيات2")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFR1JwX2pyMFM3Ykk";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1nYLrDf7K6Oq0PenvY9E1HbwSa_c8wx6I&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
 
                 else if (dep == "E" & ye == 2 & sem == 2 & material.getSelectedItem().toString().equals("essay writing")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFSVBlRTB0LXBKT2c";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFR1JwX2pyMFM3Ykk&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
                 else if (dep == "E" & ye == 2 & sem == 2 & material.getSelectedItem().toString().equals("novel")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFMk9GR3dEeDNNNDQ";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFSVBlRTB0LXBKT2c&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
-                else if (dep == "E" & ye == 2 & sem == 2 & material.getSelectedItem().toString().equals("عماره-civilization")) {
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFbGVDQkhwbTA5M28";
+                else if (dep == "E" & ye == 2 & sem == 2 & material.getSelectedItem().toString().equals("حضاره-civilization")) {
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFMk9GR3dEeDNNNDQ&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
                 else if (dep == "E" & ye == 3 & sem == 1 & material.getSelectedItem().toString().equals("د/شاكر رزق")) {
-                    ur = "https://drive.google.com/drive/folders/18wcf5cwC6ZaPIQesj-7tq8gh18KbtCyi";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFbGVDQkhwbTA5M28&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
                 }
 
 
                 else if (dep == "F" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("grammer")) {
 
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFVU90V2VwWWdXemc";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/1dvFWHkRZ8jNmAzwfWpc1aAl-tJ0C7-fs&service=writely";
                 }
                 else if (dep == "F" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("امتحانات")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRguSHNYNDd5YWt3a0k";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0ByJz1l2rodbFVU90V2VwWWdXemc&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "F" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("تعبير كتابى")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaTWZva1JTY0RuOWc";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0Bx1TXZ-UjRguSHNYNDd5YWt3a0k&service=writely";
                 }
                 else if (dep == "F" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("صوتيات")) {
 
-                    ur = "https://drive.google.com/drive/folders/1HiJsGLlWEZcJdZsbTW0pIojGDn2AtLp6";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0BzYYW8dU6VmaTWZva1JTY0RuOWc&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
 
 
                 else if (dep == "F" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("امتحانات")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRguS1FnbDFRZ1REUGs";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1HiJsGLlWEZcJdZsbTW0pIojGDn2AtLp6&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "F" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("حضاره د/دعاء")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaTGdUVzFnRWFPS1U";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0Bx1TXZ-UjRguS1FnbDFRZ1REUGs&service=writely";
                 }
                 else if (dep == "F" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("حضاره د/منى")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaT2phbUFIREZYYkU";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0BzYYW8dU6VmaTGdUVzFnRWFPS1U&service=writely";
                 }
                 else if (dep == "F" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("عربى")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaTXlNVVFoeVFIbUU";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0BzYYW8dU6VmaT2phbUFIREZYYkU&service=writely";
                 }
                 else if (dep == "F" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("قراءه د/ابراهيم")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaOHJuOGxVWndTZ0k";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0BzYYW8dU6VmaTXlNVVFoeVFIbUU&service=writely";
                 }
                 else if (dep == "F" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("محادثه د/ عبده")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaNG1NdTNqdEdoNHc";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0BzYYW8dU6VmaOHJuOGxVWndTZ0k&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "F" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("نصوص د/ منى")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaaW5scTFuT2JUUE0";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0BzYYW8dU6VmaNG1NdTNqdEdoNHc&service=writely";
                 }
 
 
                 else if (dep == "F" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("grammer")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRguQ0lla01YWlZkS2c";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0Bx1TXZ-UjRguNE0yRl81R1dwUTQ&service=writely";
                 }
 
                 else if (dep == "F" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("امتحانات1")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRguNE0yRl81R1dwUTQ";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0BzYYW8dU6VmaaW5scTFuT2JUUE0&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "F" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("امتحانات2")) {
 
-                    ur = "https://drive.google.com/drive/folders/1-c-aKiFwclBdA2Xjoonql5Nb1zqQ2I4-";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0Bx1TXZ-UjRguQ0lla01YWlZkS2c&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "F" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("امتحانات3")) {
 
-                    ur = "https://drive.google.com/drive/folders/1w3BDN29exg0v6t2ZVZ7QoRRon_nvHzT1";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1-c-aKiFwclBdA2Xjoonql5Nb1zqQ2I4-&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
 
 
                 else if (dep == "F" & ye == 2 & sem == 2 & material.getSelectedItem().toString().equals("امتحانات")) {
 
-                    ur = "https://drive.google.com/drive/folders/0ByJz1l2rodbFSmJfcTRidzdWa28";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/1w3BDN29exg0v6t2ZVZ7QoRRon_nvHzT1&service=writely";
                 }
 
 
                 else if (dep == "PH" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("اخلاق - د/محروس")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRgudXhJTUFHbXNteUU";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F14VKt2K9_b_0ZKmZaRxzi7wB3et7-Iwtj&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
 
 
                 else if (dep == "PH" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("تفكير علمى-د/منتصر")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRguR3NFc20yczNRSms";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0Bx1TXZ-UjRgudXhJTUFHbXNteUU&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "PH" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("رياضه")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRguNmcydkVqYmJ3RG8";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0Bx1TXZ-UjRguR3NFc20yczNRSms&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "PH" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("سياسه د/منتصر")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRguaEpZekhHS3VXN2c";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0Bx1TXZ-UjRguNmcydkVqYmJ3RG8&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "PH" & ye == 2 & sem == 1 & material.getSelectedItem().toString().equals("علم الكلام د/منتصر")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRguOEg5cUsyYzFhaGM";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0Bx1TXZ-UjRguaEpZekhHS3VXN2c&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
 
 
                 else if (dep == "S" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("الاسس النظريه")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmadEtrenFDZkhjWjQ";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0Bx1TXZ-UjRguOEg5cUsyYzFhaGM&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "S" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("امتحانات")) {
 
-                    ur = "https://drive.google.com/drive/folders/0Bx1TXZ-UjRgudS1Rb3RpQU43LVE";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0BzYYW8dU6VmadEtrenFDZkhjWjQ&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "S" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("تاريخ الفكر الاجتماعى")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaZVQ4X18xQ1phbkU";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0Bx1TXZ-UjRgudS1Rb3RpQU43LVE&service=writely";
                 }
                 else if (dep == "S" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("جغرافيا عامه")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaX0lYQXFUXzBQVTA";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0BzYYW8dU6VmaZVQ4X18xQ1phbkU&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "S" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("فلسفه عامه")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmabTZiSW5ZNVF3RHc";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0BzYYW8dU6VmaX0lYQXFUXzBQVTA&service=writely";
                 }
                 else if (dep == "S" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("لغه عربيه")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaM2ZvMno3dlZ2Vms";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0BzYYW8dU6VmabTZiSW5ZNVF3RHc&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "S" & ye == 1 & sem == 1 & material.getSelectedItem().toString().equals("مدخل فى علم الاجتماع")) {
 
-                    ur = "https://drive.google.com/drive/folders/1r7q3pqn16jwN7u8RoMxwPkAJ5WCFbhXv";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0BzYYW8dU6VmaZDhpTHBIcXlReU0&service=writely";
                 }
 
 
                 else if (dep == "S" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("الاحصاء")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaZDhpTHBIcXlReU0";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1r7q3pqn16jwN7u8RoMxwPkAJ5WCFbhXv&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "S" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("انثروبولوجيا")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaRk92VVBNbE1kc28";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0BzYYW8dU6VmaZDhpTHBIcXlReU0&service=writely";
                 }
                 else if (dep == "S" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("بناء المجتمع ونظمه")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaWmtaRk9naVdSWnc";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0BzYYW8dU6VmaRk92VVBNbE1kc28&service=writely";
                 }
                 else if (dep == "S" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("علم السكان")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6Vmaem9TdGYwVDBWUnc";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0BzYYW8dU6VmaWmtaRk9naVdSWnc&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
                 else if (dep == "S" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("علم النفس")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaZzlLeGhzWjNyX0k";
+                    ur = "https://accounts.google.com/ServiceLogin?hl=ar&passive=true&continue=https://drive.google.com/drive/folders/0BzYYW8dU6Vmaem9TdGYwVDBWUnc&service=writely";
                 }
                 else if (dep == "S" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("لغه انجليزيه")) {
 
-                    ur = "https://drive.google.com/drive/folders/0BzYYW8dU6VmaeWNITF96VXd6b2M";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0BzYYW8dU6VmaZzlLeGhzWjNyX0k&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
 
 
                 else if (dep == "S" & ye == 1 & sem == 2 & material.getSelectedItem().toString().equals("امتحانات ترم اول")) {
 
-                    ur = "https://drive.google.com/drive/folders/1nwZxToYr7QGDcatbX0aqrKrh7P2HgWrW";
+                    ur = "https://accounts.google.com/signin/v2/sl/pwd?hl=ar&passive=true&continue=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F0BzYYW8dU6VmaeWNITF96VXd6b2M&service=writely&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
                 }
 
 
